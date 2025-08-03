@@ -7,7 +7,7 @@ from datetime import datetime
 from prompt import prompt_multilingual
 
 # Gemini API Key
-genai.configure(api_key="AIzaSyCJ36BPXn3J2wDaNnY9nG8OetE3NUOzYcM")  # Replace with your key
+genai.configure(api_key="")  # Replace with your key
 
 # --- GUI Setup ---
 window = tk.Tk()
