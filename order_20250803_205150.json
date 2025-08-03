@@ -1,0 +1,35 @@
+{
+    "delivery_address": "** Rhinstr 59, Berlin 10315",
+    "pizzas": [
+        {
+            "type": "Veggie Delight",
+            "size": "Small",
+            "crust": "Thin Crust",
+            "toppings": [
+                "Egg"
+            ]
+        },
+        {
+            "type": "Veggie Delight",
+            "size": "Small",
+            "crust": "Thin Crust",
+            "toppings": [
+                "Egg"
+            ]
+        },
+        {
+            "type": "Unknown",
+            "size": "Unknown",
+            "crust": "Thin Crust",
+            "toppings": [
+                "Egg"
+            ]
+        }
+    ],
+    "halal": true,
+    "allergies": "** None",
+    "payment": {
+        "method": "PayPal",
+        "total": 6.5
+    }
+}

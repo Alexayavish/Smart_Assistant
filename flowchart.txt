@@ -1,0 +1,28 @@
+flowchart TD
+    A[Start App] --> B[Configure Gemini API Key]
+    B --> C[Set System Prompt with Pizza Rules]
+    C --> D[Initialize Gemini Chat]
+    D --> E{Chat Started?}
+
+    E -- Yes --> F[Send System Prompt to Gemini]
+    F --> G[Store Initial Assistant Response]
+    E -- No --> H[Display Error Message]
+
+    G --> I[Setup GUI Window]
+    I --> J[Create ScrolledText Chat Display]
+    J --> K[Create User Input Field]
+    K --> L[Create Send Button]
+    L --> M[Define Text Color Themes]
+    M --> N[Show Initial Assistant Message]
+
+    N --> O{User Enters Message}
+    O -- Yes --> P[Display User Message]
+    P --> Q[Send Message to Gemini]
+    Q --> R{Gemini Responds?}
+    R -- Yes --> S[Display Assistant Response]
+    R -- No --> T[Display Error Message]
+
+    O -- No --> U[Wait for Input]
+
+    S --> O
+    T --> O
