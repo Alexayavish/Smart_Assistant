@@ -1,0 +1,24 @@
+flowchart TD
+    Start[Start Application] --> InitGUI[Initialize GUI]
+    InitGUI --> LangSelect[User selects language]
+    LangSelect -->|Click Start| InitChat[Initialize Gemini Chat with selected language]
+    InitChat --> ShowWelcome[Show assistant greeting]
+
+    ShowWelcome --> UserInput[User types message]
+    UserInput --> SendMsg[Send message to Gemini API]
+    SendMsg --> ReceiveResp[Receive response from Gemini]
+
+    ReceiveResp --> DisplayResp[Display response in chat window]
+
+    DisplayResp --> CheckOrder{Is response an order summary?}
+    CheckOrder -- Yes --> ParseOrder[Parse order details with regex]
+    ParseOrder --> CreateOrderJSON[Create structured order JSON]
+    CreateOrderJSON --> SaveOrder[Save order JSON file]
+    SaveOrder --> NotifySaved[Notify user order saved]
+    NotifySaved --> UserInput
+
+    CheckOrder -- No --> UserInput
+
+    %% Error Handling
+    SendMsg -->|Exception| ShowError[Display error message]
+    ShowError --> UserInput
